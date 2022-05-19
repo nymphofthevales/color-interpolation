@@ -1,0 +1,62 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    cursor: cell;
+    font-family: ZenKakuRegular;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+}
+h1, h2 {
+    font-family: ZenKakuBold;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-anchor {
+    margin: 0 auto;
+}
+
+#grid-frame {
+    overflow: scroll;
+    position: relative;
+    display: flex;
+}
+
+.grid-renderer-frame {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#grid-mount-container {
+    margin: auto;
+    padding: 150px;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+}
+
+#grid-mount {
+    position: relative;
+    width: max-content;
+    height: max-content;
+}
+.grid-row {
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+    height: 5px;
+}
+.grid-cell {
+    height: 5px;
+    width:5px;
+}

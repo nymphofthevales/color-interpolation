@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "watch": true,
+        "lib": ["DOM","ES2021"],
+        "moduleResolution": "node"
+    },
+    "files": [
+        "./scripts/direction.ts",
+        "./scripts/coordinate.ts",
+        "./scripts/grid.ts",
+        "./scripts/map_helpers.ts",
+        "./scripts/numerical_helpers.ts",
+        "./scripts/renderer.ts",
+        "./colorLerp.ts"
+      ]
+}
