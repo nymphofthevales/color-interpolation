@@ -1,6 +1,6 @@
 # color-interpolation
 <p align="center">
-  <img src="./generated_patterns/1png" width="50%">
+  <img src="./generated_patterns/1.png" width="50%">
  </p>
  <p align="center">
   <img src="./generated_patterns/2.png" width="50%">
