@@ -1,8 +1,11 @@
 
-import { copyFileSync } from "fs"
 import { Coordinate } from "./scripts/coordinate.js"
 import { Grid, Row, Cell } from "./scripts/grid.js"
 import { getCellReference, GridRenderer } from "./scripts/renderer.js"
+/**
+ * Interpolation functions from Freya Holmer's "The Simple Yet Powerful Math We Don't Talk About".
+*/
+
 
 /**
  * Interpolates between two values.
@@ -78,9 +81,20 @@ c.colorMap.forEachCell((cell, grid, returnvar)=>{
     DOMCell.style.backgroundColor = arrayToCSSRGBString(cell.data.color)
 })
 
-function arrayToCSSRGBString([r,g,b]) {
-    r = Math.abs(r)
-    g = Math.abs(g)
-    b = Math.abs(b)
+function arrayToCSSRGBString(rgbArray) {
+    for (let i = 0; i < 3; i++) {
+        let color = rgbArray[i]
+        color = boundValue(255,0,color)
+    }
+    let [r,g,b] = rgbArray
     return `rgb(${r},${g},${b})`
+}
+
+function boundValue(lower,upper,value) {
+   if (value > upper) {
+      value = upper
+   } else if (value < lower) {
+      value = lower
+   }
+   return value
 }
